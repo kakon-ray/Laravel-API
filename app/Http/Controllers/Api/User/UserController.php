@@ -18,7 +18,7 @@ class UserController extends Controller
     function userdetails(Request $request)
     {
 
-      $user = Auth::guard('api')->user();
+      $user = Auth::guard('user-api')->user();
       return response()->json(['user'=>$user, 'status' => 200, 'msg' => 'User Data']);
      
     }
